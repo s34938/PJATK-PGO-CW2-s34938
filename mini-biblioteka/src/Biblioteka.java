@@ -8,8 +8,17 @@ public class Biblioteka {
         this.liczbaKsiazek=0;
     }
 
-    // public void dodajKsiazke(Ksiazka ksiazka)
-    // { // logika dodawania do tablicy }
+    public void dodajKsiazke(Ksiazka ksiazka)
+    {
+        if(liczbaKsiazek < ksiazki.length)
+        {
+            ksiazki[liczbaKsiazek] = ksiazka;
+            liczbaKsiazek++;
+        } else
+        {
+            System.out.println("Biblioteka jest pełnia, nie można dodać!!!");
+        }
+    }
     
 }
 
