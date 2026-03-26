@@ -19,6 +19,18 @@ public class Biblioteka {
             System.out.println("Biblioteka jest pełnia, nie można dodać!!!");
         }
     }
+
+    public void wypiszDostepneKsiazki()
+    {
+        System.out.println("Dostępne ksiązki: ");
+        for (int i = 0; i < liczbaKsiazek ; i++)
+        {
+            if(ksiazki[i].dostepna)
+            {
+                ksiazki[i].wypiszInfo();
+            }
+        }
+    }
     
 }
 
