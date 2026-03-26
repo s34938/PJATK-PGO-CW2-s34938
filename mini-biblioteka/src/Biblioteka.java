@@ -83,5 +83,16 @@ public class Biblioteka {
         System.out.println("Nie znaleziono ksiązki: " + tytul);
     }
 
-    
+    public void zwrocKsiazke
+    {
+        for (int i = 0 ; i < liczbaKsiazek ; i++)
+        {
+            if(ksiazki[i].tytul.equals(tytul))
+            {
+                ksiazki[i].zwroc;
+                czytelnik.wypozyczonaKsiazka = null;
+                System.out.println("Zwrócono książkę: " + tytuł);
+            }
+        }
+    }
 }
