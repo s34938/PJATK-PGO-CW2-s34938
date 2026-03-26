@@ -25,9 +25,9 @@ public class Biblioteka {
         System.out.println("Dostępne ksiązki: ");
         for (int i = 0; i < liczbaKsiazek ; i++)
         {
-            if(ksiazki[i].dostepna)
+            if(ksiazki[i].isDostepna())
             {
-                ksiazki[i].wypiszInfo();
+                ksiazki[i].WypiszInfo();
             }
         }
     }
@@ -36,14 +36,14 @@ public class Biblioteka {
     {
         for (int i = 0; i < liczbaKsiazek; i++)
         {
-            if(ksiazki[i].tytul.equals(tytul))
+            if(ksiazki[i].getTytul().equals(tytul))
             {
                 System.out.println("Znaleziono ksiązkę: " + tytul);
-                ksiazki[i].wypiszInfo();
+                ksiazki[i].WypiszInfo();
                 break;
             } else
             {
-                System.out.println("Nie znaleziono książki: " + tytuł);
+                System.out.println("Nie znaleziono książki: " + tytul);
             }
         }
     }
@@ -53,25 +53,26 @@ public class Biblioteka {
         int licznik = 0;
         for (int i = 0 ; i < liczbaKsiazek ; i++)
         {
-            if (ksiazki[i].dostepna)
+            if (ksiazki[i].isDostepna())
             {
                 licznik++;
             }
         }
-        System.out.println("Liczba dostępnych książek wynosi: " + licznik);
+        System.out.println("Liczba dostępnych książek wynosi:");
+        return licznik;
     }
 
-    public void wypozyczKsiazke
+    public void wypozyczKsiazke(String tytul, Czytelnik czytelnik)
     {
         for (int i = 0 ; i < liczbaKsiazek ; i++)
         {
-            if(ksiazki[i].tytul.equals(tytul))
+            if(ksiazki[i].getTytul().equals(tytul))
             {
-               if(ksiazki[i].dostepna)
+               if(ksiazki[i].isDostepna())
                {
-                   ksiazki[i].wypozycz;
+                   ksiazki[i].wypozycz();
                    czytelnik.wypozyczonaKsiazka = ksiazki[i];
-                   System.out.println("Wypozyczono książkę: " + tytuł + " czytelnikowi: "
+                   System.out.println("Wypozyczono książkę: " + tytul + " czytelnikowi: "
                    + czytelnik.imie + " " + czytelnik.nazwisko);
                } else
                {
@@ -83,15 +84,15 @@ public class Biblioteka {
         System.out.println("Nie znaleziono ksiązki: " + tytul);
     }
 
-    public void zwrocKsiazke
+    public void zwrocKsiazke(String tytul, Czytelnik czytelnik)
     {
         for (int i = 0 ; i < liczbaKsiazek ; i++)
         {
-            if(ksiazki[i].tytul.equals(tytul))
+            if(ksiazki[i].getTytul().equals(tytul))
             {
-                ksiazki[i].zwroc;
+                ksiazki[i].zwroc();
                 czytelnik.wypozyczonaKsiazka = null;
-                System.out.println("Zwrócono książkę: " + tytuł);
+                System.out.println("Zwrócono książkę: " + tytul);
             }
         }
     }

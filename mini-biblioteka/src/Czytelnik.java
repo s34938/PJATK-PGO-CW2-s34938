@@ -3,6 +3,7 @@ public class Czytelnik {
     String nazwisko;
     int numerKarty;
     int liczbaWypozyczen;
+    Ksiazka wypozyczonaKsiazka;
 
     public Czytelnik(String imie, String nazwisko, int numerKarty, int liczbaWypozyczen)
     {
@@ -20,16 +21,16 @@ public class Czytelnik {
     }
 
     //zwiekszenie l. wypozyczen
-    public int zwiekszLiczbeWypozyczen()
+    public void zwiekszLiczbeWypozyczen()
     {
-        liczbaWypozyczen += liczbaWypozyczen;
+        liczbaWypozyczen++;
         System.out.println("Wypożyczono książkę :). Liczba wypożyczeń wynosi teraz: " + liczbaWypozyczen);
     }
 
     //zmniejszenie l. wypozyczen
-    public int zmniejszLiczbeWypozyczen()
+    public void zmniejszLiczbeWypozyczen()
     {
-        liczbaWypozyczen -= liczbaWypozyczen;
+        liczbaWypozyczen--;
         System.out.println("Oddano książkę :). Liczba wypożyczeń wynosi teraz: " + liczbaWypozyczen);
     }
     

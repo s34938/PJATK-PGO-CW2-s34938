@@ -10,11 +10,19 @@ public class Ksiazka {
         this.liczbaStron=liczbaStron;
         this.dostepna=dostepna;
     }
+
+    public String getTytul() {
+        return this.tytul;
+    }
+
+    public boolean isDostepna() {
+        return this.dostepna;
+    }
     
     //metoda do wypisywania informacji
     public void WypiszInfo()
     {
-        System.out.println("Książka: " + tytul ", Autor: " + autor + ", Liczba stron: " + liczbaStron);
+        System.out.println("Książka: " + tytul + " , Autor: " + autor + ", Liczba stron: " + liczbaStron);
         if (dostepna){
             System.out.println("Książka jest dostępna");
         }else
