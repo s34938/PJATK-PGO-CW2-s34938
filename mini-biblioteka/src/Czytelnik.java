@@ -25,13 +25,12 @@ public class Czytelnik {
         liczbaWypozyczen += liczbaWypozyczen;
         System.out.println("Wypożyczono książkę :). Liczba wypożyczeń wynosi teraz: " + liczbaWypozyczen);
     }
+
+    //zmniejszenie l. wypozyczen
+    public int zmniejszLiczbeWypozyczen()
+    {
+        liczbaWypozyczen -= liczbaWypozyczen;
+        System.out.println("Oddano książkę :). Liczba wypożyczeń wynosi teraz: " + liczbaWypozyczen);
+    }
+    
 }
-
-
-/*pola: imie, nazwisko, numerKarty, liczbaWypozyczen
-
-· konstruktor ustawiający dane czytelnika
-
-· metody: wypiszDane(), zwiekszLiczbeWypozyczen(), zmniejszLiczbeWypozyczen()
-
-· w Main utwórz co najmniej dwóch czytelników i wywołaj ich metody*/
