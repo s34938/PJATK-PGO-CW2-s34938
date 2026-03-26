@@ -48,7 +48,7 @@ public class Biblioteka {
         }
     }
 
-    public int policzDostepneKsiazki()
+    public void policzDostepneKsiazki()
     {
         int licznik = 0;
         for (int i = 0 ; i < liczbaKsiazek ; i++)
@@ -58,8 +58,7 @@ public class Biblioteka {
                 licznik++;
             }
         }
-        System.out.println("Liczba dostępnych książek wynosi:");
-        return licznik;
+        System.out.println("Liczba dostępnych książek wynosi:" + licznik);
     }
 
     public void wypozyczKsiazke(String tytul, Czytelnik czytelnik)
