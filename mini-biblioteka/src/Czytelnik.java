@@ -11,6 +11,14 @@ public class Czytelnik {
         this.numerKarty=numerKarty;
         this.liczbaWypozyczen=liczbaWypozyczen;
     }
+
+    public void wypiszDane()
+    {
+        System.out.println("Imie: " + imie + " ,Nazwisko: " + nazwisko + " ,Numer Karty: " +
+                numerKarty + " ,Liczba Wypożyczań: " + liczbaWypozyczen);
+    }
+
+
 }
 
 
