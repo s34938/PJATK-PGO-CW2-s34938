@@ -61,4 +61,27 @@ public class Biblioteka {
         System.out.println("Liczba dostępnych książek wynosi: " + licznik);
     }
 
+    public void wypozyczKsiazke
+    {
+        for (int i = 0 ; i < liczbaKsiazek ; i++)
+        {
+            if(ksiazki[i].tytul.equals(tytul))
+            {
+               if(ksiazki[i].dostepna)
+               {
+                   ksiazki[i].wypozycz;
+                   czytelnik.wypozyczonaKsiazka = ksiazki[i];
+                   System.out.println("Wypozyczono książkę: " + tytuł + " czytelnikowi: "
+                   + czytelnik.imie + " " + czytelnik.nazwisko);
+               } else
+               {
+                   System.out.println("Książka: " + tytul + " niestety została już wypożyczona przez kogoś innego");
+               }
+               return;
+            }
+        }
+        System.out.println("Nie znaleziono ksiązki: " + tytul);
+    }
+
+    
 }
