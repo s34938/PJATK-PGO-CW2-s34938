@@ -22,5 +22,19 @@ public class Ksiazka {
             System.out.println("Książka niedostępna");
         }
     }
+
+    //metoda do wypozyczania
+    public void wypozycz()
+    {
+        if(dostepna)
+        {
+            dostepna = false;
+            System.out.println("Książka została wypożyczona :)");
+        } else
+        {
+            System.out.println("Książka jest niedostępna :(");
+        }
+    }
+    
     
 }
