@@ -35,6 +35,12 @@ public class Ksiazka {
             System.out.println("Książka jest niedostępna :(");
         }
     }
-    
+
+    //metoda do zwracania
+    public void zwroc()
+    {
+        dostepna = true;
+        System.out.println("Książka pomyślnie zwrócona");
+    }
     
 }
