@@ -11,5 +11,21 @@ public class Main
         biblioteka.dodajKsiazke(k2);
         biblioteka.dodajKsiazke(k3);
 
+        System.out.println("=======Wypisanie=======");
+        Czytelnik c1 = new Czytelnik("Halina", "Nowak", 1,0);
+        biblioteka.wypiszDostepneKsiazki();
+        c1.wypiszDane();
+
+        System.out.println("=======Wypożyczanie=======");
+        biblioteka.wypozyczKsiazke("Hobbit", c1);
+        biblioteka.wypiszDostepneKsiazki();
+        biblioteka.policzDostepneKsiazki();
+
+        System.out.println("=======Zwracanie=======");
+        biblioteka.zwrocKsiazke("Hobbit", c1);
+
+        System.out.println("=======Sprawdzenie=======");
+        c1.wypiszDane();
+        biblioteka.policzDostepneKsiazki();
     }
 }
