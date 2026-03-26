@@ -12,13 +12,19 @@ public class Czytelnik {
         this.liczbaWypozyczen=liczbaWypozyczen;
     }
 
+    //wypisywanie danych
     public void wypiszDane()
     {
         System.out.println("Imie: " + imie + " ,Nazwisko: " + nazwisko + " ,Numer Karty: " +
                 numerKarty + " ,Liczba Wypożyczań: " + liczbaWypozyczen);
     }
 
-
+    //zwiekszenie l. wypozyczen
+    public int zwiekszLiczbeWypozyczen()
+    {
+        liczbaWypozyczen += liczbaWypozyczen;
+        System.out.println("Wypożyczono książkę :). Liczba wypożyczeń wynosi teraz: " + liczbaWypozyczen);
+    }
 }
 
 
